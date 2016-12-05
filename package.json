@@ -1,0 +1,20 @@
+{
+  "name": "node-webapi",
+  "description": "RESTful web API implement",
+  "version": "0.1.0",
+  "author": "Romain Queraud <romain.queraud@etudiant.mines-nantes.fr>",
+  "contributors": [],
+  "dependencies": {
+    "basic-auth": "^1.1.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-domain-middleware": "^0.1.0",
+    "express-xml-bodyparser": "^0.3.0",
+    "mongoose": "^4.6.8",
+    "mongoose-relationship": "^0.1.5"
+  },
+  "scripts": {
+    "code:jshint": "node_modules/jscs/bin/jshint lib/**.js test/**/**.js",
+    "code:style": "node_modules/jscs/bin/jscs *.js lib/*.js test/server/*.js"
+  }
+}
