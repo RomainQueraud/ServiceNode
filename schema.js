@@ -9,18 +9,10 @@ var userSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
-    password: {
+    company: {
         type: String,
         required: true
-    },
-    /*
-    posts: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        }
-    ]
-    */
+    }
 });
 
 var user = mongoose.model('User', userSchema);

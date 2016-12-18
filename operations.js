@@ -37,17 +37,19 @@ exports.removeAllPosts = function(callback) {
 
 /*
  var romain = new User(
- {
- username : "Romain",
- password : "pw"
- }
+     {
+        username : "Romain",
+        company : "MinesNantes"
+     }
  );
+
  exports.addUser(romain, function(err){
- if(err) {
- console.log("error in : exports.addUser");
- console.log(err);
- }
- })*/
+    if(err) {
+        console.log("error in : exports.addUser");
+        console.log(err);
+    }
+ });
+ */
 
 exports.getUsers(function(err, data){
     console.log(data);

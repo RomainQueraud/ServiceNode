@@ -2,7 +2,9 @@
  * Created by romain on 05/12/16.
  */
 var express = require('express');
+var cors = require('cors')
 var app = express();
+app.use(cors());
 
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );
@@ -53,6 +55,8 @@ app.delete('/contacts', function(req, res){
 var server = app.listen(1337, function () {
     var host = server.address().address
     var port = server.address().port
+
+
 
     console.log("Example app listening at http://%s:%s", host, port)
 })
