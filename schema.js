@@ -1,10 +1,8 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-
 
 // Define our user schema
 var userSchema = new mongoose.Schema({
-    username: {
+    name: {
         type: String,
         unique: true,
         required: true
@@ -12,6 +10,14 @@ var userSchema = new mongoose.Schema({
     company: {
         type: String,
         required: true
+    }
+}, { versionKey: false });
+
+userSchema.set('toJSON', { //Pour avoir le bon format utilisé par le Angular
+    transform: function (doc, ret, options) {
+        ret.id = ret._id;
+        delete ret._id;
+        delete ret.__v;
     }
 });
 

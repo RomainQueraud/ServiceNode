@@ -30,7 +30,12 @@ app.get('/contacts/:id', function(req, res){
 app.post('/contacts', function(req, res){
     console.log(req.body);
     operations.addUser(req.body, function(err, data){
-       res.send(data);
+        if(err){
+            res.send(err);
+        }
+        else{
+            res.send(data);
+        }
     });
 });
 

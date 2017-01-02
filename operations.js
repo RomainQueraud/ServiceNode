@@ -34,11 +34,10 @@ exports.removeAllPosts = function(callback) {
         {},
         callback);
 };
-
 /*
  var romain = new User(
      {
-        username : "Romain",
+        name : "Romain",
         company : "MinesNantes"
      }
  );
@@ -50,6 +49,7 @@ exports.removeAllPosts = function(callback) {
     }
  });
  */
+
 
 exports.getUsers(function(err, data){
     console.log(data);
